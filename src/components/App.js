@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import daiLogo from '../dai-logo.png';
+import INR from '../INR.jpeg';
 import './App.css';
 import Web3 from 'web3';
 import DaiTokenMock from '../abis/DaiTokenMock.json'
@@ -25,13 +25,17 @@ class App extends Component {
 
   async loadBlockchainData() {
     const web3 = window.web3
+    console.log(web3);
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
-    const daiTokenAddress = "0x7b729B07EcBDEd8879Acf997aAF6546926982830" // Replace DAI Address Here
+    console.log(this.state.account);
+    const daiTokenAddress = "0xDe757977eb395D4f66C7C5C3B07c84ECd3403C43" // Replace DAI Address Here
     const daiTokenMock = new web3.eth.Contract(DaiTokenMock.abi, daiTokenAddress)
     this.setState({ daiTokenMock: daiTokenMock })
-    const balance = await daiTokenMock.methods.balanceOf(this.state.account).call()
+    console.log(daiTokenMock);
+    const balance = await  daiTokenMock.methods.balanceOf(this.state.account).call();
     this.setState({ balance: web3.utils.fromWei(balance.toString(), 'Ether') })
+    console.log(balance.toString());
     const transactions = await daiTokenMock.getPastEvents('Transfer', { fromBlock: 0, toBlock: 'latest', filter: { from: this.state.account } })
     this.setState({ transactions: transactions })
     console.log(transactions)
@@ -59,11 +63,11 @@ class App extends Component {
         <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
           <a
             className="navbar-brand col-sm-3 col-md-2 mr-0"
-            href="http://www.dappuniversity.com/bootcamp"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Dapp University
+            ETHER WALLET
           </a>
         </nav>
         <div className="container-fluid mt-5">
@@ -75,9 +79,9 @@ class App extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={daiLogo} width="150" />
+                  <img src={INR} width="150" />
                 </a>
-                <h1>{this.state.balance} DAI</h1>
+                <h1>{this.state.balance} INR</h1>
                 <form onSubmit={(event) => {
                   event.preventDefault()
                   const recipient = this.recipient.value
