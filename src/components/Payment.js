@@ -29,7 +29,7 @@ class Payment1 extends Component {
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
     console.log(this.state.account);
-    const daiTokenAddress = "0x58aA22e29eB785d7C60C4D8D92fa29dcca9cB8b8" // Replace DAI Address Here
+    const daiTokenAddress = "0x7691B75d3aAED69F63d15bDe4490d926CAD94C93" // Replace DAI Address Here
     const daiTokenMock = new web3.eth.Contract(DaiTokenMock.abi, daiTokenAddress)
     this.setState({ daiTokenMock: daiTokenMock })
     console.log(daiTokenMock);
