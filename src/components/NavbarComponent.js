@@ -46,14 +46,9 @@ function NavbarComponent(){
                         <Nav.Link className="ml-4 mr-4">My Wallet</Nav.Link>
                     </LinkContainer>  
 
-                    <LinkContainer to="/orders">
+                    <LinkContainer to="/statistics">
                         <Nav.Link className="ml-4 mr-4">Statistics</Nav.Link>
-                    </LinkContainer>
-
-                    <LinkContainer to="/orders">
-                        <Nav.Link className="ml-4 mr-4">Statistics</Nav.Link>
-                    </LinkContainer>               
-                           
+                    </LinkContainer>             
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
