@@ -48,6 +48,10 @@ function NavbarComponent(){
 
                     <LinkContainer to="/orders">
                         <Nav.Link className="ml-4 mr-4">Statistics</Nav.Link>
+                    </LinkContainer>
+
+                    <LinkContainer to="/orders">
+                        <Nav.Link className="ml-4 mr-4">Statistics</Nav.Link>
                     </LinkContainer>               
                            
                 </Nav>
