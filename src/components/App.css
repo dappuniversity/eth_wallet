@@ -44,10 +44,4 @@
     font-family: 'Lobster', cursive;
 }
 
-@media screen and (max-width: 576px) {
-    .donate-button{
-        margin-left: 16px;
-    }
-}
-
 
