@@ -1,13 +1,47 @@
-/* Styles go here */
+
+/* NavBar */
+
 .logo {
-  transform: scale(1.5);
+    transform: scale(1.5);
+  }
+  
+  .navbar-content {
+    font-size: large;
+  }
+  
+  .navbar-color {
+    background-color: #1abc9c;
+  }
+
+/* Home Component */
+
+.statistics-strip{
+    text-align: center;
+    background-color: #17a2b8;
+    color: white;
 }
 
-.navbar-content {
-  font-size: large;
+.statistics-anchor{
+    color: #28527a;
 }
 
-.navbar-color {
-  background-color: #1abc9c;
+.donate-button{
+    background-color: #28527a;
 }
+
+.jumbotron{
+    background-image: url("../background.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100%;
+}
+
+.agroworld{
+    text-align: center;
+    font-size: 100px;
+    margin: 100px auto;
+    color: #28527a;
+    font-family: 'Lobster', cursive;
+}
+
 

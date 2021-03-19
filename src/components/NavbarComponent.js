@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
-import Logo from '../Logo.png'
+import Logo from '../logo.png'
 
 function NavbarComponent()
     {
@@ -46,6 +46,10 @@ function NavbarComponent()
 
                     <LinkContainer to="/payment">
                         <Nav.Link className="ml-4 mr-4">My Wallet</Nav.Link>
+                    </LinkContainer>  
+
+                    <LinkContainer to="/sell">
+                        <Nav.Link className="ml-4 mr-4">Sell</Nav.Link>
                     </LinkContainer>  
 
                     <LinkContainer to="/statistics">
