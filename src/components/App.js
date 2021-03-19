@@ -6,6 +6,7 @@ import Login from './Login';
 import Register from './Register';
 import Orders from './Orders';
 import Statistics from './Statistics';
+import Sell from './Sell';
 import NavbarComponent from './NavbarComponent';
 import Footer from './Footer';
 
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/statistics">
               <Statistics />
+            </Route>
+            <Route path="/sell">
+              <Sell />
             </Route>
           </Switch>
           <hr className="mx-4 mt-5" />

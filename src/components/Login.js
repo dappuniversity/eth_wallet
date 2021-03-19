@@ -46,7 +46,7 @@ function Login() {
                         </Form.Group>
 
                         <div className="center">
-                        <Button variant="primary" type="submit" style={{width: "130px",background: "#1C4D06", fontSize: "25px" ,height: "50px"}}>
+                        <Button variant="primary" type="submit" style={{width: "100px",background: "#1C4D06", fontSize: "20px" ,height: "50px"}}>
                             LOGIN
                         </Button>
                         <br />

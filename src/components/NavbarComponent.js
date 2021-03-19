@@ -48,6 +48,10 @@ function NavbarComponent()
                         <Nav.Link className="ml-4 mr-4">My Wallet</Nav.Link>
                     </LinkContainer>  
 
+                    <LinkContainer to="/sell">
+                        <Nav.Link className="ml-4 mr-4">Sell</Nav.Link>
+                    </LinkContainer>  
+
                     <LinkContainer to="/statistics">
                         <Nav.Link className="ml-4 mr-4">Statistics</Nav.Link>
                     </LinkContainer>             
