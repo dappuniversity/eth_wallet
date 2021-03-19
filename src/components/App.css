@@ -1,47 +1,121 @@
+/* Styles go here */
+body {
+  background-color: #dbf6e9;
+}
 
 /* NavBar */
 
 .logo {
-    transform: scale(1.5);
-  }
-  
-  .navbar-content {
-    font-size: large;
-  }
-  
-  .navbar-color {
-    background-color: #1abc9c;
-  }
+  transform: scale(1.5);
+}
+
+.navbar-content {
+  font-size: large;
+}
+
+.navbar-color {
+  background-color: #1abc9c;
+}
 
 /* Home Component */
 
-.statistics-strip{
-    text-align: center;
-    background-color: #17a2b8;
-    color: white;
+.statistics-strip {
+  text-align: center;
+  background-color: #17a2b8;
+  color: white;
 }
 
-.statistics-anchor{
-    color: #28527a;
+.statistics-anchor {
+  color: #28527a;
 }
 
-.donate-button{
-    background-color: #28527a;
+.donate-button {
+  background-color: #28527a;
 }
 
-.jumbotron{
-    background-image: url("../background.jpg");
-    background-size: cover;
-    background-repeat:no-repeat;
-    height: 100%;
+.jumbotron {
+  background-image: url("../background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-.agroworld{
-    text-align: center;
-    font-size: 100px;
-    margin: 100px auto;
-    color: #28527a;
-    font-family: 'Lobster', cursive;
+.agroworld {
+  text-align: center;
+  font-size: 100px;
+  margin: 100px auto;
+  color: #28527a;
+  font-family: "Lobster", cursive;
 }
 
+/*Login, Register Page */
+.login-header,
+.register-header {
+  align-items: center;
+  height: 77px;
+  margin-top: 10px;
+  background: #3b966a;
+  border-radius: 15px;
+}
 
+.login-header-name,
+.register-header-name {
+  font-family: Amaranth;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.075em;
+  color: #ffffff;
+  padding-top: 9px;
+}
+
+.login-form,
+.register-form {
+  height: 750px;
+  background: linear-gradient(180deg, #1abc9c 0%, rgba(10, 190, 6, 0) 100%);
+  border-radius: 15px;
+}
+
+@media (min-width: 576px) {
+  .login-form,
+  .register-form {
+    width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login-form,
+  .register-form {
+    width: 650px;
+  }
+}
+
+.login-form .form-label,
+.register-form .form-label {
+  height: 34px;
+  width: 95px;
+  font-family: Amaranth;
+  font-weight: bold;
+  margin-left: 3vmin;
+  margin-top: 2vmin;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0.075em;
+}
+
+.login-form .form-control,
+.register-form .form-control {
+  float: right;
+  width: 330px;
+  height: 45px;
+  margin-right: 2vmin;
+  background: #f7f5f5;
+  border: 3px solid #0e6b3e;
+  border-radius: 3px;
+}
+
+.center {
+  text-align: center;
+}
