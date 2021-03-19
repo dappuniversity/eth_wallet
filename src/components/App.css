@@ -1,1 +1,13 @@
 /* Styles go here */
+.logo {
+  transform: scale(1.5);
+}
+
+.navbar-content {
+  font-size: large;
+}
+
+.navbar-color {
+  background-color: #1abc9c;
+}
+

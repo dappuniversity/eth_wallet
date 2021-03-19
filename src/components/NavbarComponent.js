@@ -1,17 +1,19 @@
 import React from 'react'
-import { Navbar, Nav, NavDropdown, Button} from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
-function NavbarComponent(){
+import Logo from '../Logo.png'
 
+function NavbarComponent()
+    {
     return (
-        <Navbar expand="lg" bg="success">
+        <Navbar expand="lg" className="navbar-color" variant="dark">
             <LinkContainer to="/">
                 <Navbar.Brand >
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+                        src= { Logo }
                         width="50"
                         height="50"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top logo"
                         alt="Agriculure Logo"
                     />
                 </Navbar.Brand>
@@ -19,7 +21,7 @@ function NavbarComponent(){
                 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="ml-auto">
+                <Nav className="ml-auto navbar-content">
                     <LinkContainer to="/login">
                         <Nav.Link className="ml-4 mr-4">Login/Sign Up</Nav.Link>
                     </LinkContainer>    
