@@ -1,1 +1,25 @@
-/* Styles go here */
+/* Home Component */
+
+.statistics-strip{
+    text-align: center;
+    background-color: #17a2b8;
+    color: white;
+}
+
+.statistics-button{
+    background-color: #28527a;
+}
+
+.jumbotron{
+    background-image: url("../background.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 100%;
+}
+
+.agroworld{
+    text-align: center;
+    font-size: 100px;
+    margin: 100px auto;
+    color: #28527a;
+}
