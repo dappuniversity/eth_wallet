@@ -1,3 +1,18 @@
+
+/* NavBar */
+
+.logo {
+    transform: scale(1.5);
+  }
+  
+  .navbar-content {
+    font-size: large;
+  }
+  
+  .navbar-color {
+    background-color: #1abc9c;
+  }
+
 /* Home Component */
 
 .statistics-strip{
@@ -6,7 +21,11 @@
     color: white;
 }
 
-.statistics-button{
+.statistics-anchor{
+    color: #28527a;
+}
+
+.donate-button{
     background-color: #28527a;
 }
 
@@ -22,4 +41,13 @@
     font-size: 100px;
     margin: 100px auto;
     color: #28527a;
+    font-family: 'Lobster', cursive;
 }
+
+@media screen and (max-width: 576px) {
+    .donate-button{
+        margin-left: 16px;
+    }
+}
+
+
