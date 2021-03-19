@@ -1,3 +1,7 @@
+body{
+  background-color: #dbf6e9;
+}
+
 
 /* NavBar */
 
@@ -42,6 +46,42 @@
     margin: 100px auto;
     color: #28527a;
     font-family: 'Lobster', cursive;
+}
+
+/*Sell Page*/
+
+.Sell-Form{
+  width: 40%;
+  background-color: #8ac4d0;
+  padding: 2% 2%;
+}
+
+.Sell-inputs{
+  width: 100%;
+}
+
+.Sell-Labels{
+  color: #025955;
+}
+
+.Sell-submit{
+  background-color: #28527a;
+}
+
+.Sell-title{
+  background-color: #28527a;
+  color: #8ac4d0;
+  margin-bottom: 4%;
+  font-size: 200%;
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+
+  .Sell-Form{
+    width: 80%;
+  }
+
 }
 
 
