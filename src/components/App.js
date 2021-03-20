@@ -7,9 +7,11 @@ import Register from './Register';
 import Orders from './Orders';
 import Statistics from './Statistics';
 import Sell from './Sell';
+import CerealsAndPulses from './CerealsAndPulses';
+import Vegetables from './Vegetables';
+import Fruits from './Fruits';
 import NavbarComponent from './NavbarComponent';
 import Footer from './Footer';
-
 
 function App() {
   return (
@@ -39,6 +41,15 @@ function App() {
             </Route>
             <Route path="/sell">
               <Sell />
+            </Route>
+            <Route path="/CerealsAndPulses">
+              <CerealsAndPulses />
+            </Route>
+            <Route path="/vegetables">
+              <Vegetables />
+            </Route>
+            <Route path="/fruits">
+              <Fruits />
             </Route>
           </Switch>
           <Footer />

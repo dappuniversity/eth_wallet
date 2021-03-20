@@ -3,7 +3,7 @@ import React from 'react';
 function Statistics() {
     return (
         <div>
-            <h1>Statistics</h1>
+            <h1 className="text-center mt-4">Statistics</h1>
         </div>
     )
 }
