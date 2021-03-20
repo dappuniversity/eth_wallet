@@ -51,12 +51,29 @@ body{
 
 .Sell-Form{
   width: 40%;
-  background-color: #8ac4d0;
-  padding: 2% 2%;
+  background: linear-gradient(180deg, #1abc9c 0%, rgba(10, 190, 6, 0) 100%);
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.Sell-title{
+  background-color: #3b966a;
+  color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 4%;
+  font-family: Amaranth;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.075em;
 }
 
 .Sell-inputs{
   width: 100%;
+  border: 3px solid #0e6b3e;
+  border-radius: 3px;
 }
 
 .Sell-Labels{
@@ -64,21 +81,27 @@ body{
 }
 
 .Sell-submit{
-  background-color: #28527a;
+  background-color: #1C4D06;
 }
 
 .Sell-title{
-  background-color: #28527a;
-  color: #8ac4d0;
+  background-color: #3b966a;
+  color: #ffffff;
+  border-radius: 15px;
   margin-bottom: 4%;
-  font-size: 200%;
+  font-family: Amaranth;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 61px;
   text-align: center;
+  letter-spacing: 0.075em;
 }
 
 @media screen and (max-width: 576px) {
 
   .Sell-Form{
-    width: 80%;
+    width: 450px;
   }
 
 }
@@ -103,7 +126,7 @@ body{
   text-align: center;
   letter-spacing: 0.075em;
   color: #ffffff;
-  padding-top: 9px;
+  margin-top: 9px;
 }
 
 .login-form,
@@ -141,8 +164,8 @@ body{
 .register-form .form-label {
   height: 34px;
   width: 95px;
-  font-family: Amaranth;
   font-weight: bold;
+  color: #025955;
   margin-left: 3vmin;
   margin-top: 2vmin;
   font-size: 17px;
@@ -162,33 +185,4 @@ body{
 
 .center {
   text-align: center;
-}
-
-
-/* Styling for the Product Component */
-.card-style{
-  width: 20rem;
-}
-.card-img{
-  width: 318px;
-  height: 178.63px;
-}
-.card-title{
-  font-size: 1.5rem;
-}
-.mrp-style{
-  color:#383e56;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-.desc-style{
-  color: #727272;
-  font-size: 14px;
-}
-.card-footer{
-  font-size: 0.75rem;
-}
-.grid-style{
-  padding-top:3.5%;
-  padding-left: 5.8%;
 }

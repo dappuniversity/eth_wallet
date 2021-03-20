@@ -66,11 +66,11 @@ function Sell() {
     return (
         <div className="mt-5">
 
-            <Container className="Sell-Form">
+            <div className="Sell-Form">
                 <div className="Sell-title">
                     <strong>Enter your Product Details</strong>
                 </div>
-                <Form onSubmit={handleSubmit} >
+                <Form onSubmit={handleSubmit} className="px-4">
 
                     <Form.Group as={Row} controlId="SellerName">
                         <Form.Label className="Sell-Labels" column lg="3" xs="4">
@@ -104,7 +104,7 @@ function Sell() {
                             <strong>Item Description</strong> 
                         </Form.Label>
                         <Col lg="9" xs="8">
-                            <Form.Control as="textarea" rows={3} placeholder="Item Description" onChange={handleDescriptionChange} required maxLength="90"/>                            
+                            <Form.Control as="textarea" rows={3} className="Sell-inputs" placeholder="Item Description" onChange={handleDescriptionChange} required maxLength="90"/>                            
                             <Form.Text id="passwordHelpBlock" muted>
                                 Your item's decription must be 50-90 characters long.
                             </Form.Text>
@@ -155,7 +155,7 @@ function Sell() {
                             <strong>Item Image</strong> 
                         </Form.Label>
                         <Col lg="9" xs="8">
-                        <   Form.File className="Sell-inputs" id="exampleFormControlFile1" required/>
+                        <   Form.File id="exampleFormControlFile1" required/>
                         </Col>
                     </Form.Group>
 
@@ -166,7 +166,7 @@ function Sell() {
                     </div> 
 
                 </Form>           
-            </Container>
+            </div>
             
         </div>
     )
