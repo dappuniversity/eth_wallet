@@ -105,7 +105,7 @@ function Sell() {
                         </Form.Label>
                         <Col lg="9" xs="8">
                             <Form.Control as="textarea" rows={3} className="Sell-inputs" placeholder="Item Description" onChange={handleDescriptionChange} required maxLength="90"/>                            
-                            <Form.Text id="passwordHelpBlock" muted>
+                            <Form.Text id="Description-limit" muted>
                                 Your item's decription must be 50-90 characters long.
                             </Form.Text>
                         </Col>
@@ -155,7 +155,10 @@ function Sell() {
                             <strong>Item Image</strong> 
                         </Form.Label>
                         <Col lg="9" xs="8">
-                        <   Form.File id="exampleFormControlFile1" required/>
+                            <Form.File id="exampleFormControlFile1" required/>
+                            <Form.Text id="File-extension" muted>
+                                Add image having .png, .jpg or .jpeg extensions
+                            </Form.Text>
                         </Col>
                     </Form.Group>
 
