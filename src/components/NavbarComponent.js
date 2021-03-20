@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
-import Logo from '../Logo.png'
+import Logo from '../logo.png'
 
 function NavbarComponent()
     {
@@ -27,17 +27,17 @@ function NavbarComponent()
                     </LinkContainer>    
                             
                     <NavDropdown className="ml-4 mr-4" title="Categories" id="basic-nav-dropdown">
-                                
-                        <NavDropdown.Item>Cereals & Pulses</NavDropdown.Item>
-                            
+                        <LinkContainer to='/CerealsAndPulses'>  
+                            <NavDropdown.Item>Cereals & Pulses</NavDropdown.Item>
+                        </LinkContainer>   
                         <NavDropdown.Divider />
-                            
-                        <NavDropdown.Item>Vegetables</NavDropdown.Item>
-                            
+                        <LinkContainer to='/vegetables'>   
+                            <NavDropdown.Item>Vegetables</NavDropdown.Item>
+                        </LinkContainer>   
                         <NavDropdown.Divider />
-                            
-                        <NavDropdown.Item>Fruits</NavDropdown.Item>
-                            
+                        <LinkContainer to='/fruits'>  
+                            <NavDropdown.Item>Fruits</NavDropdown.Item>
+                        </LinkContainer>     
                     </NavDropdown>
 
                     <LinkContainer to="/orders">

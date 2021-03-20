@@ -1,6 +1,9 @@
 import React,{ useState } from 'react';
 import { useHistory } from "react-router-dom";
 import { Jumbotron, Container, Card, Button, Col, Row} from 'react-bootstrap';
+import Product from "./Product";
+import Grid from '@material-ui/core/Grid';
+import productList from "./productList";
 
 function Home() {
 
@@ -30,7 +33,13 @@ function Home() {
                     <h1 className="agroworld">Agro World</h1>
                 </Container>
             </Jumbotron>
-            
+            <Grid container>
+               {
+                   productList.map((eachProduct,index)=>{
+                    return <Product key={index} product={eachProduct} />
+                   })
+               }
+            </Grid>
         </div>
         
     )
