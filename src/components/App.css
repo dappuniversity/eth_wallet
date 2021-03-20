@@ -53,7 +53,7 @@ body {
 .register-header {
   align-items: center;
   height: 77px;
-  margin-top: 10px;
+  margin-top: 40px;
   background: #3b966a;
   border-radius: 15px;
 }
@@ -78,10 +78,15 @@ body {
   border-radius: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .login-form,
   .register-form {
-    width: 480px;
+    width: 450px;
+  }
+
+  .login-form .form-control,
+  .register-form .form-control {
+    width: 300px;
   }
 }
 
@@ -89,6 +94,11 @@ body {
   .login-form,
   .register-form {
     width: 650px;
+  }
+
+  .login-form .form-control,
+  .register-form .form-control {
+    width: 450px;
   }
 }
 
@@ -108,7 +118,6 @@ body {
 .login-form .form-control,
 .register-form .form-control {
   float: right;
-  width: 330px;
   height: 45px;
   margin-right: 2vmin;
   background: #f7f5f5;

@@ -29,7 +29,7 @@ function Login() {
     return (
         <div>
             <Container align="center">
-                <div className="login-form" style={{height: "500px"}}>
+                <div className="login-form" style={{height: "480px"}}>
                     <div className="login-header text-center">
                         <h2 className="login-header-name">LOGIN</h2>
                     </div>
