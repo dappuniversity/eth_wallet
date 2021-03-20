@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import { Container, Button, Col, Row, Form} from 'react-bootstrap';
+import {Button, Col, Row, Form} from 'react-bootstrap';
 
 function Sell() {
     const [sellerName, setsellerName] = useState('');

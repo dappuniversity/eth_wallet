@@ -2,6 +2,12 @@ body{
   background-color: #dbf6e9;
 }
 
+.heading{
+  font-family: Amaranth;
+  font-weight: bold;
+  color: #3b966a;
+}
+
 /* NavBar */
 
 .logo {
