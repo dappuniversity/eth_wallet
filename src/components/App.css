@@ -126,7 +126,7 @@ body{
   text-align: center;
   letter-spacing: 0.075em;
   color: #ffffff;
-  margin-top: 9px;
+  padding-top: 9px;
 }
 
 .login-form,
@@ -170,7 +170,6 @@ body{
   margin-top: 2vmin;
   font-size: 17px;
   line-height: 24px;
-  letter-spacing: 0.075em;
 }
 
 .login-form .form-control,
@@ -185,4 +184,32 @@ body{
 
 .center {
   text-align: center;
+}
+
+/* Styling for the Product Component */
+.card-style{
+  width: 20rem;
+}
+.card-img{
+  width: 318px;
+  height: 178.63px;
+}
+.card-title{
+  font-size: 1.5rem;
+}
+.mrp-style{
+  color:#383e56;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.desc-style{
+  color: #727272;
+  font-size: 14px;
+}
+.card-footer{
+  font-size: 0.75rem;
+}
+.grid-style{
+  padding-top:3.5%;
+  padding-left: 5.8%;
 }
