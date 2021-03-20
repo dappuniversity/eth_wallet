@@ -52,7 +52,7 @@ function Login() {
                         <br />
                         <br />
                         <br />
-                        <a className="login" href="./Register" onClick="handleClick">Don't Have An Account, Create Now!!</a>
+                        <a className="login" href="/Register" onClick="handleClick">Don't Have An Account, Create Now!!</a>
                         </div>
                     </Form>
                 </div>
