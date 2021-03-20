@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from './Home';
 import Payment from './Payment';
 import Login from './Login';
+import Register from './Register';
 import Orders from './Orders';
 import Statistics from './Statistics';
 import Sell from './Sell';
 import NavbarComponent from './NavbarComponent';
 import Footer from './Footer';
+
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
             <Route path="/orders">
               <Orders />
             </Route>
@@ -36,7 +41,6 @@ function App() {
               <Sell />
             </Route>
           </Switch>
-          <hr className="mx-4 mt-5" />
           <Footer />
         </Router>
       </div>

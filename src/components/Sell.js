@@ -70,7 +70,7 @@ function Sell() {
                 <div className="Sell-title">
                     <strong>Enter your Product Details</strong>
                 </div>
-                <Form >
+                <Form onSubmit={handleSubmit} >
 
                     <Form.Group as={Row} controlId="SellerName">
                         <Form.Label className="Sell-Labels" column lg="3" xs="4">
@@ -155,12 +155,12 @@ function Sell() {
                             <strong>Item Image</strong> 
                         </Form.Label>
                         <Col lg="9" xs="8">
-                        <   Form.File className="Sell-inputs" id="exampleFormControlFile1"/>
+                        <   Form.File className="Sell-inputs" id="exampleFormControlFile1" required/>
                         </Col>
                     </Form.Group>
 
                     <div className="text-center">
-                        <Button className="Sell-submit" type="submit" onClick={handleSubmit}>
+                        <Button className="Sell-submit" type="submit" >
                             Submit
                         </Button>
                     </div> 
