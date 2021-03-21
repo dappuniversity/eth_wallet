@@ -20,7 +20,7 @@ function Login() {
         e.preventDefault();
         console.log(email)
         console.log(password)
-        history.push('/Home')
+        history.push('/')
     };
 
     const handleClick = e => {
