@@ -162,6 +162,7 @@ body {
   .register-form .form-control {
     width: 450px;
   }
+  
 }
 
 .login-form .form-label,
@@ -213,10 +214,19 @@ body {
 .card-footer {
   font-size: 0.75rem;
 }
-.grid-style {
-  padding-top: 3.5%;
-  padding-left: 5.8%;
+@media (min-width:768px){
+  .grid-style{
+    padding-top:3.5%;
+    padding-left: 5.8%;
+  }
 }
+@media (max-width:580px){
+  .grid-style{
+    padding-top: 5%;
+    padding-left: 16%;
+  }
+}
+
 
 /* Statistics Page */
 

@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 
 function Product(props){
-    return <Grid item lg={4} className="grid-style">
+    return <Grid item lg={4} xs={12} md={6} className="grid-style">
               <Card className="card-style">
                 <Card.Img variant="top" className="card-img" src={props.product.image} />
                 <Card.Body>
