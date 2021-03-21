@@ -29,7 +29,7 @@ function Login() {
     return (
         <div>
             <Container align="center">
-                <div className="login-form" style={{height: "500px"}}>
+                <div className="login-form" style={{height: "425px"}}>
                     <div className="login-header text-center">
                         <h2 className="login-header-name">LOGIN</h2>
                     </div>
@@ -52,7 +52,7 @@ function Login() {
                         <br />
                         <br />
                         <br />
-                        <a className="login" href="./Register" onClick="handleClick">Don't Have An Account, Create Now!!</a>
+                        <a className="login" href="/Register" onClick="handleClick">Don't Have An Account, Create Now!!</a>
                         </div>
                     </Form>
                 </div>
