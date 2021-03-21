@@ -1,6 +1,11 @@
-/* Styles go here */
 body {
   background-color: #dbf6e9;
+}
+
+.heading{
+  font-family: Amaranth;
+  font-weight: bold;
+  color: #3b966a;
 }
 
 /* NavBar */
@@ -48,12 +53,69 @@ body {
   font-family: "Lobster", cursive;
 }
 
+/*Sell Page*/
+
+.Sell-Form {
+  width: 40%;
+  background: linear-gradient(180deg, #1abc9c 0%, rgba(10, 190, 6, 0) 100%);
+  border-radius: 15px;
+  margin: 0 auto;
+}
+
+.Sell-title {
+  background-color: #3b966a;
+  color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 4%;
+  font-family: Amaranth;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.075em;
+}
+
+.Sell-inputs {
+  width: 100%;
+  border: 3px solid #0e6b3e;
+  border-radius: 3px;
+}
+
+.Sell-Labels {
+  color: #025955;
+}
+
+.Sell-submit {
+  background-color: #1c4d06;
+}
+
+.Sell-title {
+  background-color: #3b966a;
+  color: #ffffff;
+  border-radius: 15px;
+  margin-bottom: 4%;
+  font-family: Amaranth;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 61px;
+  text-align: center;
+  letter-spacing: 0.075em;
+}
+
+@media screen and (max-width: 576px) {
+  .Sell-Form {
+    width: 450px;
+  }
+}
+
 /*Login, Register Page */
 .login-header,
 .register-header {
   align-items: center;
   height: 77px;
-  margin-top: 10px;
+  margin-top: 40px;
   background: #3b966a;
   border-radius: 15px;
 }
@@ -78,17 +140,27 @@ body {
   border-radius: 15px;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .login-form,
   .register-form {
-    width: 480px;
+    width: 450px;
+  }
+
+  .login-form .form-control,
+  .register-form .form-control {
+    width: 300px;
   }
 }
 
 @media (min-width: 768px) {
   .login-form,
   .register-form {
-    width: 650px;
+    width: 600px;
+  }
+
+  .login-form .form-control,
+  .register-form .form-control {
+    width: 450px;
   }
 }
 
@@ -96,19 +168,17 @@ body {
 .register-form .form-label {
   height: 34px;
   width: 95px;
-  font-family: Amaranth;
   font-weight: bold;
+  color: #025955;
   margin-left: 3vmin;
   margin-top: 2vmin;
   font-size: 17px;
   line-height: 24px;
-  letter-spacing: 0.075em;
 }
 
 .login-form .form-control,
 .register-form .form-control {
   float: right;
-  width: 330px;
   height: 45px;
   margin-right: 2vmin;
   background: #f7f5f5;
@@ -120,31 +190,45 @@ body {
   text-align: center;
 }
 
-
 /* Styling for the Product Component */
-.card-style{
+.card-style {
   width: 20rem;
 }
-.card-img{
+.card-img {
   width: 318px;
   height: 178.63px;
 }
-.card-title{
+.card-title {
   font-size: 1.5rem;
 }
-.mrp-style{
-  color:#383e56;
+.mrp-style {
+  color: #383e56;
   font-weight: 600;
   font-size: 1.2rem;
 }
-.desc-style{
+.desc-style {
   color: #727272;
   font-size: 14px;
 }
-.card-footer{
+.card-footer {
   font-size: 0.75rem;
 }
-.grid-style{
-  padding-top:3.5%;
+.grid-style {
+  padding-top: 3.5%;
   padding-left: 5.8%;
+}
+
+/* Statistics Page */
+
+.pie-chart {
+  width: 500px;
+  height: 500px;
+  margin-left: 10%;
+}
+
+@media (min-width: 480px) {
+  .pie-chart {
+    width: 420px;
+    margin-left: 3%;
+  }
 }
