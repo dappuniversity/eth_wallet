@@ -33,7 +33,7 @@ function Home() {
                     <h1 className="agroworld">Agro World</h1>
                 </Container>
             </Jumbotron>
-            <Grid container>
+            <Grid container className="grid-container">
                {
                    productList.map((eachProduct,index)=>{
                     return <Product key={index} product={eachProduct} />
