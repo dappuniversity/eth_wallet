@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import INR from '../INR.jpeg';
+import INR from '../INR.png';
 import './App.css';
 import Web3 from 'web3';
 import DaiTokenMock from '../abis/DaiTokenMock.json'
@@ -29,7 +29,7 @@ class Payment1 extends Component {
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
     console.log(this.state.account);
-    const daiTokenAddress = "0x58aA22e29eB785d7C60C4D8D92fa29dcca9cB8b8" // Replace DAI Address Here
+    const daiTokenAddress = "0x7691B75d3aAED69F63d15bDe4490d926CAD94C93" // Replace DAI Address Here
     const daiTokenMock = new web3.eth.Contract(DaiTokenMock.abi, daiTokenAddress)
     this.setState({ daiTokenMock: daiTokenMock })
     console.log(daiTokenMock);
@@ -61,16 +61,6 @@ class Payment1 extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-          <a
-            className="navbar-brand col-sm-3 col-md-2 mr-0"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            ETHER WALLET
-          </a>
-        </nav>
         <div className="container-fluid mt-5">
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">
@@ -80,7 +70,7 @@ class Payment1 extends Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={INR} width="150" />
+                  <img src={INR} width="150" alt="INR_Image" />
                 </a>
                 <h1>{this.state.balance} INR</h1>
                 <form onSubmit={(event) => {
