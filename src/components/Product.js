@@ -16,7 +16,7 @@ function Product(props){
                      <p className="mrp-style">MRP:{props.product.price}</p>
                      <p className="desc-style">{props.product.desc}<br/><strong>Posted on {props.product.date} by {props.product.owner}</strong></p>
                   </Card.Text>
-                 <Card.Footer className="card-footer">Account No:-<br/><strong>{props.product.account_no}</strong><br/>{props.product.city},{props.product.state}</Card.Footer>
+                  <Card.Footer className="card-footer">Account No:-<br/><strong>{props.product.account_no}</strong><br/>{props.product.city},{props.product.state}</Card.Footer>
                 </Card.Body>
               </Card>
            </Grid>

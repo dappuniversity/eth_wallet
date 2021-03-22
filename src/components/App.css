@@ -242,3 +242,24 @@ body {
     margin-left: 3%;
   }
 }
+
+
+/* Orders style */
+
+.order-image{
+  width: 500px;
+  height: 300px;
+}
+.order-card{
+  padding: 2%;
+}
+.order-title{
+  font-size: 3rem;
+}
+.order-button{
+  width: 130px;
+  background: #1C4D06; 
+  font-size: 25px ;
+  height: 50px;
+  margin: 5px 15px;
+}
