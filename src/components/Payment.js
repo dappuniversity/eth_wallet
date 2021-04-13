@@ -3,6 +3,7 @@ import INR from '../INR.png';
 import './App.css';
 import Web3 from 'web3';
 import DaiTokenMock from '../abis/DaiTokenMock.json'
+import {publicKey} from './Product.js'
 
 class Payment1 extends Component {
   async componentWillMount() {
@@ -29,7 +30,7 @@ class Payment1 extends Component {
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
     console.log(this.state.account);
-    const daiTokenAddress = "0x7691B75d3aAED69F63d15bDe4490d926CAD94C93" // Replace DAI Address Here
+    const daiTokenAddress = "0xD6E0b6AcAaff8bd4c0DEcfa45bDBDc67661Db0cE" // Replace DAI Address Here
     const daiTokenMock = new web3.eth.Contract(DaiTokenMock.abi, daiTokenAddress)
     this.setState({ daiTokenMock: daiTokenMock })
     console.log(daiTokenMock);
@@ -39,6 +40,7 @@ class Payment1 extends Component {
     const transactions = await daiTokenMock.getPastEvents('Transfer', { fromBlock: 0, toBlock: 'latest', filter: { from: this.state.account } })
     this.setState({ transactions: transactions })
     console.log(transactions)
+    
   }
 
   transfer(recipient, amount) {
@@ -75,24 +77,25 @@ class Payment1 extends Component {
                 <h1>{this.state.balance} INR</h1>
                 <form onSubmit={(event) => {
                   event.preventDefault()
-                  const recipient = this.recipient.value
+                  const recipient = publicKey
                   const amount = window.web3.utils.toWei(this.amount.value, 'Ether')
                   this.transfer(recipient, amount)
                 }}>
                   <div className="form-group mr-sm-2">
-                    <input
+                  <input
                       id="recipient"
                       type="text"
                       ref={(input) => { this.recipient = input }}
                       className="form-control"
-                      placeholder="Recipient Address"
-                      required />
+                      placeholder={publicKey}
+                      readOnly />
                   </div>
                   <div className="form-group mr-sm-2">
                     <input
                       id="amount"
                       type="text"
                       ref={(input) => { this.amount = input }}
+                      
                       className="form-control"
                       placeholder="Amount"
                       required />

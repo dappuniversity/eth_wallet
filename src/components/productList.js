@@ -5,7 +5,7 @@
 const productList=[
     {
         image:productImage1,
-        category:"vegetable",
+        category:"vegetables",
         title:"Tomatoes",
         price:"30/kg",
         desc:"Beautiful red ripe heirloom tomatoes grown in a greenhouse",
@@ -13,7 +13,8 @@ const productList=[
         owner:"Shreyas Poojari",
         account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc16Bbe",
         city:"Mumbai",
-        state:"Maharashtra"
+        state:"Maharashtra",
+        phone:"7273407204720"
     },
     {
         image:productImage2,
@@ -25,19 +26,73 @@ const productList=[
         owner:"Rahim",
         account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
         city:"Mumbai",
-        state:"Maharashtra"
+        state:"Maharashtra",
+        phone:"7273407204720"
+    },
+    {
+        image:productImage2,
+        category:"cereals & pulses",
+        title:"Rice",
+        price:"35/kg",
+        desc:"Rice is grown in a greenhouse by leaving the bottom of the pots",
+        date:"19/03/2021",
+        owner:"Rahim",
+        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+        city:"Mumbai",
+        state:"Maharashtra",
+        phone:"7273407204720"
+    },
+    {
+        image:productImage2,
+        category:"cereals & pulses",
+        title:"Rice",
+        price:"35/kg",
+        desc:"Rice is grown in a greenhouse by leaving the bottom of the pots",
+        date:"19/03/2021",
+        owner:"Rahim",
+        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+        city:"Mumbai",
+        state:"Maharashtra",
+        phone:"7273407204720"
     },
     {
         image:productImage3,
         category:"vegetables",
         title:"Lady Finger",
         price:"20/kg",
-        desc:"Ajaaooo Lellooo",
+        desc:"Nice Quality",
         date:"19/03/2021",
         owner:"Madanlal",
         account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
         city:"Navi-Mumbai",
-        state:"Maharashtra"
+        state:"Maharashtra",
+        phone:"7273407204720"
+    },
+    {
+        image:productImage3,
+        category:"vegetables",
+        title:"Lady Finger",
+        price:"20/kg",
+        desc:"Nice Quality",
+        date:"19/03/2021",
+        owner:"Madanlal",
+        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+        city:"Navi-Mumbai",
+        state:"Maharashtra",
+        phone:"7273407204720"
+    },
+    {
+        image:productImage3,
+        category:"vegetables",
+        title:"Lady Finger",
+        price:"20/kg",
+        desc:"Nice Quality",
+        date:"19/03/2021",
+        owner:"Madanlal",
+        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+        city:"Navi-Mumbai",
+        state:"Maharashtra",
+        phone:"7273407204720"
     },
     {
         image:productImage4,
@@ -49,7 +104,8 @@ const productList=[
         owner:"Chaganlaal",
         account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
         city:"Mumbai",
-        state:"Maharashtra"
+        state:"Maharashtra",
+        phone:"7273407204720"
     },
     {
         image:productImage4,
@@ -61,7 +117,8 @@ const productList=[
         owner:"Chaganlaal",
         account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
         city:"Mumbai",
-        state:"Maharashtra"
+        state:"Maharashtra",
+        phone:"7273407204720"
     },
     {
         image:productImage4,
@@ -73,7 +130,8 @@ const productList=[
         owner:"Chaganlaal",
         account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
         city:"Mumbai",
-        state:"Maharashtra"
+        state:"Maharashtra",
+        phone:"7273407204720"
     }
 ]
 

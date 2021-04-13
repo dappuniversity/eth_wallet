@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom';
 import React, {useState} from 'react'
 import { Form, Container, Button } from 'react-bootstrap'
+import { auth } from '../firebase';
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -17,10 +18,15 @@ function Login() {
     const history = useHistory();
 
     const handleSubmit = e => {
-        e.preventDefault();
-        console.log(email)
-        console.log(password)
-        history.push('/')
+            e.preventDefault();
+    
+            auth
+                .signInWithEmailAndPassword(email, password)
+                .then(auth => {
+                    history.push('/')
+                })
+                .catch(error => alert(error.message))
+    
     };
 
     const handleClick = e => {
@@ -52,7 +58,7 @@ function Login() {
                         <br />
                         <br />
                         <br />
-                        <a className="login" href="/Register" onClick="handleClick">Don't Have An Account, Create Now!!</a>
+                        <a className="login" href="/Register" onClick={handleClick}>Don't Have An Account, Create Now!!</a>
                         </div>
                     </Form>
                 </div>

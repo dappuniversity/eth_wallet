@@ -1,15 +1,23 @@
 import React,{ useState } from 'react';
 import {Button, Col, Row, Form} from 'react-bootstrap';
+import { db,storage } from "../firebase";
+import { useStateValue } from "../StateProvider";
+import productList from './productList'
 
 function Sell() {
     const [sellerName, setsellerName] = useState('');
     const [itemName, setItemName] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
-    const [categorySelected,setCategorySelected]=useState('Cereal or Pulse');
+    const [category,setCategory]=useState('Cereal or Pulse');
     const [publicKey, setpublicKey] = useState('');
     const [city, setCity] = useState('');
     const [state, setState2] = useState('');
+    const [image,setImage] = useState(null);
+    const [url,setUrl] = useState('');
+    // const [dataStored,setDataStored] = useState('')
+
+    const [{user},dispatch] = useStateValue();
     
     const handleSellerNameChange = e => {
         setsellerName(e.target.value); 
@@ -28,7 +36,7 @@ function Sell() {
     };
 
     const onChangeCategory = (e) =>{  
-        setCategorySelected(e.target.value);
+        setCategory(e.target.value);
     }
 
     const handlepublicKeyChange = e => {
@@ -43,25 +51,76 @@ function Sell() {
         setState2(e.target.value);
     };
 
-
-    const handleSubmit = (e) =>{ 
-        e.preventDefault();
-        if(description.length > 49 && description.length < 91 ){
-            alert("You have successfully posted your product");
-            console.log(sellerName)
-            console.log(itemName)
-            console.log(price)
-            console.log(description)
-            console.log(categorySelected)
-            console.log(publicKey)
-            console.log(city)
-            console.log(state)
+    const addFile = e => {
+        console.log(e.target.files[0]);
+        if(e.target.files[0]) {
+            setImage(e.target.files[0])
         }
-        else{
-            alert("Your item's decription must be 50-90 characters long.");
-        }  
     }
 
+    
+
+    const handleSubmit = (e)=> { 
+        e.preventDefault();
+        if(description.length < 91 ) {}
+
+            const uploadTask = storage.ref(`images/${image.name}`).put(image);
+            uploadTask.on(
+              "state_changed",
+              snapshot => {},
+              error => {
+                console.log(error);
+              },
+              () => {
+                storage
+                  .ref("images")
+                  .child(image.name)
+                  .getDownloadURL()
+                  .then(url => {
+                    setUrl(url);
+                    console.log(url);
+                    const itemData = {
+                        sellerName,
+                        itemName,
+                        price,
+                        description,
+                        category,
+                        publicKey,
+                        city,
+                        state,
+                        itemImageUrl : url,
+                        sellerId:user.uid,
+                        timeStamp : new Date()
+                    }
+        
+                    console.log(itemData);
+                    
+                    const listItemData = {
+                        image:url,
+                        category,
+                        title:itemName,
+                        price,
+                        desc:description,
+                        date:new Date().toISOString(),
+                        owner:sellerName,
+                        account_no:publicKey,
+                        city,
+                        state
+                    }
+
+                    productList.push(listItemData)
+                    
+                    db
+                    .collection('Items')
+                    .add(itemData)  
+
+                    alert("Product ad posted successfully !");
+
+                  });
+              }
+            );
+        }
+    
 
     return (
         <div className="mt-5">
@@ -155,7 +214,7 @@ function Sell() {
                             <strong>Item Image</strong> 
                         </Form.Label>
                         <Col lg="9" xs="8">
-                            <Form.File id="exampleFormControlFile1" required/>
+                            <Form.File type="file" onChange={addFile} id="exampleFormControlFile1" required/>
                             <Form.Text id="File-extension" muted>
                                 Add image having .png, .jpg or .jpeg extensions
                             </Form.Text>

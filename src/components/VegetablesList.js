@@ -16,18 +16,18 @@ const VegetablesList=[
        city:"Mumbai",
        state:"Maharashtra"
    },
-   {
-       image:productImage2,
-       category:"cereals & pulses",
-       title:"Rice",
-       price:"35/kg",
-       desc:"Rice is grown in a greenhouse by leaving the bottom of the pots",
-       date:"19/03/2021",
-       owner:"Rahim",
-       account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
-       city:"Mumbai",
-       state:"Maharashtra"
-   },
+//    {
+//        image:productImage2,
+//        category:"cereals & pulses",
+//        title:"Rice",
+//        price:"35/kg",
+//        desc:"Rice is grown in a greenhouse by leaving the bottom of the pots",
+//        date:"19/03/2021",
+//        owner:"Rahim",
+//        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+//        city:"Mumbai",
+//        state:"Maharashtra"
+//    },
    {
        image:productImage3,
        category:"vegetables",
@@ -39,43 +39,43 @@ const VegetablesList=[
        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
        city:"Navi-Mumbai",
        state:"Maharashtra"
-   },
-   {
-       image:productImage4,
-       category:"fruits",
-       title:"Apples",
-       price:"100/kg",
-       desc:"No chemicals used while farming and it is very sweet",
-       date:"19/03/2021",
-       owner:"Chaganlaal",
-       account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
-       city:"Mumbai",
-       state:"Maharashtra"
-   },
-   {
-       image:productImage4,
-       category:"fruits",
-       title:"Apples",
-       price:"100/kg",
-       desc:"No chemicals used while farming and it is very sweet",
-       date:"19/03/2021",
-       owner:"Chaganlaal",
-       account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
-       city:"Mumbai",
-       state:"Maharashtra"
-   },
-   {
-       image:productImage4,
-       category:"fruits",
-       title:"Apples",
-       price:"100/kg",
-       desc:"No chemicals used while farming and it is very sweet",
-       date:"19/03/2021",
-       owner:"Chaganlaal",
-       account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
-       city:"Mumbai",
-       state:"Maharashtra"
    }
+//    {
+//        image:productImage4,
+//        category:"fruits",
+//        title:"Apples",
+//        price:"100/kg",
+//        desc:"No chemicals used while farming and it is very sweet",
+//        date:"19/03/2021",
+//        owner:"Chaganlaal",
+//        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+//        city:"Mumbai",
+//        state:"Maharashtra"
+//    },
+//    {
+//        image:productImage4,
+//        category:"fruits",
+//        title:"Apples",
+//        price:"100/kg",
+//        desc:"No chemicals used while farming and it is very sweet",
+//        date:"19/03/2021",
+//        owner:"Chaganlaal",
+//        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+//        city:"Mumbai",
+//        state:"Maharashtra"
+//    },
+//    {
+//        image:productImage4,
+//        category:"fruits",
+//        title:"Apples",
+//        price:"100/kg",
+//        desc:"No chemicals used while farming and it is very sweet",
+//        date:"19/03/2021",
+//        owner:"Chaganlaal",
+//        account_no:"0xFbF37daE3cAdDC01c4Df7ef5e28801939fc",
+//        city:"Mumbai",
+//        state:"Maharashtra"
+//    }
 ]
 
 export default VegetablesList;

@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { Form, Container, Button } from 'react-bootstrap'
+import { auth,db } from '../firebase';
 import { useHistory } from 'react-router-dom';
+
 
 
 function Register() {
@@ -12,7 +14,9 @@ function Register() {
     const [publicKey, setpublicKey] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setconfirmPassword] = useState('');
-    
+
+    const history = useHistory();
+
     const handleNameChange = e => {
         setName(e.target.value);
     };
@@ -45,21 +49,34 @@ function Register() {
         setconfirmPassword(e.target.value);
     };
 
-    const history = useHistory();
 
     const handleSubmit = e => {
         e.preventDefault();
-        if (password !== confirmPassword) 
-        {
-            alert("Passwords don't match");
-        }
-        else
-        {
-            alert("You have registered successfully!! Please login!")
-            console.log(email)
-            console.log(password)
-            history.push('/Login')
-        }
+
+        auth
+            .createUserWithEmailAndPassword(email,password)
+            .then(
+                (auth)=> {
+                    console.log(auth);
+                    if(auth) {
+                        const userData = {
+                            name,
+                            phone,
+                            city,
+                            state,
+                            publicKey
+                        }
+                        db
+                        .collection('users')
+                        .doc(auth.user.uid)
+                        .set(userData)
+
+                        history.push('/login');
+                    }
+                }
+            )
+            .catch(err => alert(err.message))
+        
     };
     return (
         <div>
